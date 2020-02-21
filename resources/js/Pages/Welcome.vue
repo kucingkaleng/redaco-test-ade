@@ -3,7 +3,7 @@
     <div class="container">
       <div class="head-container">
         <div class="d-inline-flex">
-          <Head v-for="(x, i) in head" :key="i" :active="i == 0 ? true : false" :text="x" />
+          <Head v-for="(x, i) in head" :key="i" :active="i < 1 ? true : false" :text="x" />
         </div>
       </div>
       

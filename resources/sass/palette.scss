@@ -1,0 +1,9 @@
+/* RGB */
+$primary: #FFB558;
+$primary-gradient: linear-gradient(153deg, rgba(255, 181, 88, 1) 0%, rgba(253, 127, 82, 1) 58%, rgba(253, 127, 82, 1) 100%);
+$dark: #111111;
+$white: #FFFFFF;
+
+@function colorAlpha($RGBColor, $opacityLevel) {
+  @return rgba($RGBColor, $opacityLevel);
+}

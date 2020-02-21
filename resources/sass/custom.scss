@@ -1,0 +1,151 @@
+@import "./palette.scss";
+@import "./breakpoints.scss";
+
+body {
+  background-color: $white;
+}
+
+.main {
+  background: linear-gradient(to bottom, $primary 50%, $white 50%);
+  height: 100vh;
+  overflow-y: auto;
+
+  &-dashboard {
+    background: linear-gradient(to bottom, $primary 40%, $white 40%);
+  }
+}
+
+.head-container {
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 5px;
+    @include sm {
+      height: 0;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background: #888;
+  }
+}
+
+.shadow-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  .card-header {
+    font-weight: bold;
+  }
+}
+
+.card.card-head {
+  width: 150px;
+  height: 200px;
+  margin: 10px 10px;
+  border-radius: 20px;
+
+  .card-body {
+    padding: 10px 10px;
+    position: relative;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: $dark;
+  }
+
+  .liner {
+    height: 7px;
+    width: 80%;
+    background: $primary-gradient;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -40%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    &.active {
+      background: $white;
+    }
+  }
+
+  &.active {
+    background: $primary-gradient;
+  }
+}
+
+.form-container {
+  .card {
+    border-radius: 20px;
+    width: 350px;
+  }
+
+  .form-group {
+    label {
+      font-weight: 600;
+      font-size: 10pt;
+    }
+    input.form-control {
+      border-radius: 20px;
+      box-shadow: 0 1px 2px colorAlpha($dark, 0.1),
+      0 1px 2px colorAlpha($dark, 0.1) !important;
+    }
+  }
+  .forget {
+    color: colorAlpha($dark, 0.5);
+    font-size: 9pt;
+  }
+
+  .btn {
+    border: 1px solid $primary !important;
+    border-radius: 20px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 11pt;
+
+    &.btn-primary-gradient {
+      background: $primary-gradient;
+      color: $white;
+    }
+  }
+}
+
+.appbar {
+  .brand {
+    font-weight: bold;
+  }
+}
+
+.media {
+  background: $white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+  0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 16px 16px;
+  border-radius: 20px;
+
+  img.avatar {
+    border-radius: 50%;
+    width: 50px;
+    border: 1px solid $primary;
+  }
+   
+  .title {
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  p {
+    font-size: 9pt;
+    color: colorAlpha($dark, 0.5);
+  }
+}
